@@ -23,7 +23,7 @@ module CodeClimate
 
       def write_to_file?
         warn "TO_FILE is deprecated, use CODECLIMATE_TO_FILE" if ENV["TO_FILE"]
-        CodeClimate::TestReporter.tddium? || ENV["CODECLIMATE_TO_FILE"] || ENV["TO_FILE"]
+        ENV["CODECLIMATE_TO_FILE"] || ENV["TO_FILE"]
       end
     end
   end
